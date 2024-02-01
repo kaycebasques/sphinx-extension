@@ -4,3 +4,4 @@ docs/_build
 docs/*.log
 *.egg-info
 venv
+__pycache__
