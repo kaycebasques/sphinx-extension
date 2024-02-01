@@ -1,9 +1,11 @@
-import logging  # debug
-log_id = 'sphinx-embeddings'  # debug
-logger = logging.getLogger(log_id)  # debug
-handler = logging.FileHandler(f'{log_id}.log')  # debug
-logger.addHandler(handler)  # debug
-logger.setLevel(logging.DEBUG)  # debug
+import logging
+
+
+log_id = 'sphinx-extension'
+logger = logging.getLogger(log_id)
+handler = logging.FileHandler(f'{log_id}.log')
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
 
 
 def on_doctree_resolved(app, doctree, docname):  # TODO: type hints
@@ -16,7 +18,7 @@ def setup(app):  # TODO: type hints
     # https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx-core-events
     app.connect('doctree-resolved', on_doctree_resolved)
     return {
-        'version': '0.0.2',
+        'version': '0.0.1',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }

@@ -1,6 +1,6 @@
 build
 dist
 docs/_build
-docs/sphinx-embeddings.log
-sphinx_embeddings.egg-info
+docs/*.log
+*.egg-info
 venv
